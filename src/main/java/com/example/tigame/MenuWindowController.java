@@ -29,8 +29,6 @@ public class MenuWindowController implements Initializable {
     @FXML
     private Label playBT;
 
-    @FXML
-    private Label scoresBT;
 
     @FXML
     void displayCharacters(MouseEvent event) {
@@ -47,7 +45,7 @@ public class MenuWindowController implements Initializable {
     @FXML
     void playGame(MouseEvent event) {
         GameApplication.openWindow("hello-view.fxml");
-        Stage stage = (Stage) scoresBT.getScene().getWindow();
+        Stage stage = (Stage) playBT.getScene().getWindow();
         stage.close();
     }
 
@@ -86,20 +84,12 @@ public class MenuWindowController implements Initializable {
         charactersBT.setTextFill(Color.WHITE);
     }
     @FXML
-    public void mouseEnteredScores(MouseEvent mouseEvent) {
-        scoresBT.setTextFill(Color.WHITE);
-    }
-    @FXML
     public void mouseExitedPlay(MouseEvent mouseEvent) {
         playBT.setTextFill(Color.PURPLE);
     }
     @FXML
     public void mouseExitedCharacters(MouseEvent mouseEvent) {
         charactersBT.setTextFill(Color.PURPLE);
-    }
-    @FXML
-    public void mouseExitedScores(MouseEvent mouseEvent) {
-        scoresBT.setTextFill(Color.PURPLE);
     }
     @FXML
     public void exitProgram(MouseEvent mouseEvent) {
